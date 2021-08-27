@@ -1,0 +1,37 @@
+GET http://localhost:3000
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MzAwNTI4OTksImV4cCI6MTYzMDA1Mjk1OSwiYXVkIjoiNjEyOGEyMTBkNTEwYzc0ODQwOTllYzRlIiwiaXNzIjoiY29kZXdpdGhyb3NoYW4uY29tIn0.KSbUbAxXF4xlQf9KpRIRLQoSqnqcc_U4CzJ8rq-h8AQ
+
+
+###
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+    "email": "hello@gmail.com",
+    "password": "hello"
+}
+
+
+###
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "email": "hello@gmail.com",
+    "password": "hello"
+}
+
+###
+POST http://localhost:3000/auth/refresh-token
+Content-Type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MzAwNTI4ODAsImV4cCI6MTYzMDA1MzAwMCwiYXVkIjoiNjEyOGEyMTBkNTEwYzc0ODQwOTllYzRlIiwiaXNzIjoiY29kZXdpdGhyb3NoYW4uY29tIn0.ES6uETfccf3djssRuexMur-IjaFnCH0aEhGN_VPmdsI"
+}
+
+###
+DELETE http://localhost:3000/auth/logout
+
+### when route doesn't exist
+GET http://localhost:3000/abc
+
