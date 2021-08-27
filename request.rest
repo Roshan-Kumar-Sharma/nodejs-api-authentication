@@ -1,5 +1,5 @@
 GET http://localhost:3000
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MzAwNTI4OTksImV4cCI6MTYzMDA1Mjk1OSwiYXVkIjoiNjEyOGEyMTBkNTEwYzc0ODQwOTllYzRlIiwiaXNzIjoiY29kZXdpdGhyb3NoYW4uY29tIn0.KSbUbAxXF4xlQf9KpRIRLQoSqnqcc_U4CzJ8rq-h8AQ
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MzAwNjg4NDAsImV4cCI6MTYzMDA2ODg3MCwiYXVkIjoiNjEyOGUwNjgxYWIxNzE4OThhOTczNTA1IiwiaXNzIjoiY29kZXdpdGhyb3NoYW4uY29tIn0.b6dDfIc8EnNSvjN29GgUn1RF7hmECPA35bHzJtnFlBQ
 
 
 ###
@@ -7,8 +7,8 @@ POST http://localhost:3000/auth/register
 Content-Type: application/json
 
 {
-    "email": "hello@gmail.com",
-    "password": "hello"
+    "email": "5@gmail.com",
+    "password": "123"
 }
 
 
@@ -17,8 +17,8 @@ POST http://localhost:3000/auth/login
 Content-Type: application/json
 
 {
-    "email": "hello@gmail.com",
-    "password": "hello"
+    "email": "bye@gmail.com",
+    "password": "bye"
 }
 
 ###
@@ -31,6 +31,10 @@ Content-Type: application/json
 
 ###
 DELETE http://localhost:3000/auth/logout
+
+### demo-verification-branch
+
+POST http://localhost:3000/auth/verify/email/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MzAwNzI3NTMsImV4cCI6MTYzMDA3Mjc4MywiYXVkIjoiNjEyOGU4YTM4OGY1MGY5M2Q3ZDAyYTdmIiwiaXNzIjoiY29kZXdpdGhyb3NoYW4uY29tIn0.764YALJd7m6RPahVE9utk2tbAGe81bqcn9jbq-W_4Uk
 
 ### when route doesn't exist
 GET http://localhost:3000/abc
