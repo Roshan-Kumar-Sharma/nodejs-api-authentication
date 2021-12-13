@@ -10,7 +10,7 @@ const {
 } = require("../helpers/jwt");
 
 // require("../helpers/gmail");
-const transporter = require("../helpers/gmail");
+// const transporter = require("../helpers/gmail");
 
 router.post("/register", async (req, res, next) => {
     // console.log(req.body)

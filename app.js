@@ -5,6 +5,7 @@ const dotenv = require("dotenv").config();
 
 const AuthRoutes = require("./routes/auth.routes");
 const { verifyAccessToken } = require("./helpers/jwt");
+// require("./helpers/initRedis");
 require("./helpers/initMongoDB");
 
 // const { getTransporter } = require("./helpers/gmail");
@@ -44,8 +45,8 @@ app.use(async (err, req, res, next) => {
     });
 });
 
-console.log(process.env.CLIENT_ID);
+// console.log(process.env.CLIENT_ID);
 
 app.listen(PORT, () => {
-    console.log(`server is runing on port ${PORT}`);
+    console.log(`server is running on port ${PORT}`);
 });
